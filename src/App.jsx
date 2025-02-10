@@ -12,11 +12,12 @@ const App = () => {
       <h1 className="text-4xl font-bold mb-8">⛰️ 📜 ✂️ Pierre - Papier - Ciseaux</h1>
 
       <div className="flex space-x-6">
-        {["Pierre", "Papier", "Ciseaux"].map((choice) => (
+        {["Pierre", "Papier", "Ciseaux"].map((choice) => ( //CREATION DES BTNS DE FACONS DYNAMIQUE GRACE A LA BOUCLE .MAP OU L INDEX EST CHOICE 
           <button
             key={choice}
             className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300"
             onClick={() => setPlayerChoice(choice)}
+            //ENSUITE ON MET A JOURS LE CHOIX GRACE A SETPLAYERCHOICE OU LE CHOIX EST TOUT SIMPLEMENT UN DES 3 INDEX DU TABLEAU PIERRE PAPIER OU CISEAUX
           >
             {choice}
           </button>
@@ -32,7 +33,7 @@ const App = () => {
         className="mt-6 bg-red-500 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-lg"
         onClick={() => setPlayerChoice(null)}
       >
-        🔄 Rejouer {/*BOUTTO? REJOUER EN REINISITIALISANT LE SETLAYERCHOICE A NULL ET DONC ON CACHE LA PARTIE LOGIC*/}
+        🔄 Rejouer {/*BOUTTON REJOUER EN REINISITIALISANT LE SETLAYERCHOICE A NULL ET DONC ON CACHE LA PARTIE LOGIC AFIN DE REMETTRE LE TOUT A 0*/}
       </button>
     </div>
   );
