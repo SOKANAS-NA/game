@@ -4,9 +4,9 @@ import { useState } from "react";
 import Logic from "./components/Logic"; 
 
 const App = () => {
-  const [playerChoice, setPlayerChoice] = useState(null);
+  const [playerChoice, setPlayerChoice] = useState(null); //HOOK USESTATE AFIN DE METTRE A JOUR DYNAMIQUEMENT LE CHOIX DU PLAYER
 
-  return (
+  return ( //TAILWIND
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-900 text-white p-6">
       <h1 className="text-4xl font-bold mb-8">⛰️ 📜 ✂️ Pierre - Papier - Ciseaux</h1>
 
@@ -21,14 +21,15 @@ const App = () => {
           </button>
         ))}
       </div>
+      
 
-      {playerChoice && <Logic playerChoice={playerChoice} />}
+      {playerChoice && <Logic playerChoice={playerChoice} />} {/*SI LE CHOIX DU PLAYER EST AUTRE QUE NULL ALORS ON ACTIVE LA LOGIQUE DU COMPONENT LOGIC*/}
 
       <button
         className="mt-6 bg-red-500 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-lg"
         onClick={() => setPlayerChoice(null)}
       >
-        🔄 Rejouer
+        🔄 Rejouer {/*BOUTTO? REJOUER EN REINISITIALISANT LE SETLAYERCHOICE A NULL ET DONC ON CACHE LA PARTIE LOGIC*/}
       </button>
     </div>
   );
