@@ -22,7 +22,7 @@ const Logic = ({ playerChoice }) => {
       <div className="text-center mt-6 p-4 bg-gray-700 text-white rounded-lg shadow-md">
         <p> Vous : <span className="font-bold text-yellow-400">{playerChoice}</span></p>
         <p>adversaire : <span className="font-bold text-red-400">{computerChoice}</span></p>
-        <p className="text-2xl font-bold mt-4">{result}</p> 
+        <p className="text-2xl font-bold mt-4">{result}</p>
       </div>
     );
   };
